@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO CUSTOMER_INFO(first_name, last_name, email,username,password)VALUES('$first_name', '$last_name','$email','$username','$hashed_password')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Data saved successfully.";
+            header("Location: sign-in.html");
+            exit();
         } else {
             echo "Error: " . $conn->error;
         }
