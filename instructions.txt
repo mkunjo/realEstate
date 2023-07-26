@@ -1,0 +1,15 @@
+To create database in MariaDB:
+- move table.php to project location on codd server
+
+
+Commands to see customer info in database:
+
+1.ssh amohamed14@codd.cs.gsu.edu
+
+2. mysql -u amohamed14 -p
+
+3. use amohamed14
+
+4. show tables;
+
+5. select * from CUSTOMER_INFO;
