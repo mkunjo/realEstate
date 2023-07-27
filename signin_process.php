@@ -27,8 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verify the entered password against the hashed password
         if (password_verify($password, $hashed_password)) {
-            echo "Login successful. Welcome, " . $username;
             // Redirect to a dashboard page.
+            header("Location: sellerdash.html");
+                exit();
         } else {
             echo "Invalid password.";
         }
