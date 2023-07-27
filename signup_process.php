@@ -22,14 +22,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST["password"];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Insert data into the database
-        $sql = "INSERT INTO CUSTOMER_INFO(first_name, last_name, email,username,password)VALUES('$first_name', '$last_name','$email','$username','$hashed_password')";
+        // Check if the username already exists in the database
+        $check_username_query = "SELECT * FROM CUSTOMER_INFO WHERE username = '$username'";
+        $check_username_result = $conn->query($check_username_query);
 
-        if ($conn->query($sql) === TRUE) {
-            header("Location: sign-in.html");
-            exit();
+        // Check if the email already exists in the database
+        $check_email_query = "SELECT * FROM CUSTOMER_INFO WHERE email = '$email'";
+        $check_email_result = $conn->query($check_email_query);
+
+        if ($check_username_result->num_rows > 0) {
+            echo "Username is already taken. Please choose a different one.";
+        } elseif ($check_email_result->num_rows > 0) {
+            echo "Email is already taken. Please choose a different one.";
         } else {
-            echo "Error: " . $conn->error;
+            // Insert data into the database
+            $sql = "INSERT INTO CUSTOMER_INFO(first_name, last_name, email, username, password) VALUES ('$first_name', '$last_name', '$email', '$username', '$hashed_password')";
+
+            if ($conn->query($sql) === TRUE) {
+                header("Location: sign-in.html");
+                exit();
+            } else {
+                echo "Error: " . $conn->error;
+            }
         }
     }
 

@@ -26,10 +26,10 @@
         <h1>Sign In</h1>
         <form action="signin_process.php" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" required maxlength="50" placeholder="Enter your username">
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required maxlength="50" placeholder="Enter your password">
 
             <button type="submit" name="submit">Sign In</button>
         </form>

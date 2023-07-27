@@ -11,9 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //check connection
     if ($conn->connect_error) {
         die("connection failed: " . $conn->connect_error);
-    } else {
-        echo "Connected successfully.";
-    }
+    } 
     
     // Get data from the form
     $username = $_POST["username"];
@@ -26,17 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $hashed_password = $row["password"];
-        echo "Hashed Password from the database: " . $hashed_password;
+        
         // Verify the entered password against the hashed password
         if (password_verify($password, $hashed_password)) {
             echo "Login successful. Welcome, " . $username;
-            //redirect to a dashboard page.
+            // Redirect to a dashboard page.
         } else {
-            echo "Invalid username or password.";
+            echo "Invalid password.";
         }
-    } 
+    } else {
+        echo "Username was incorrect or not found.";
     }
 
     // Close the connection
     $conn->close();
+}
 ?>
