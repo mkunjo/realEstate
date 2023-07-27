@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];
         $username = $_POST["username"];
         $password = $_POST["password"];
-
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert data into the database
