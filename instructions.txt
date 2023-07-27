@@ -13,3 +13,9 @@ Commands to see customer info in database:
 4. show tables;
 
 5. select * from CUSTOMER_INFO;
+
+           ---or---
+
+    select *  from PROPERTY;        --->  to look at property table
+    
+
