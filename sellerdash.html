@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Seller Dashboard</h1>
+    <nav>
+      <!-- Add navigation links  -->
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard">
+      <div class="property-card">
+        <img src="property1.jfif" alt="Property Image">
+        <h2>Price</h2>
+		<p>Property Location </p>
+        <p>Age: 5 years</p>
+        <p>Floor Plan: 1200 sq ft</p>
+        <p>Bedrooms: 3</p>
+        <p>Bathrooms: 2</p>
+        <div class="card-actions">
+          <a href="viewdetails.html">View Details</a>
+          <a href="editproperty.html">Edit Property</a>
+          <a href="deleteproperty.html">Delete Property</a>
+        </div>
+      </div>
+
+      <!-- Add property cards here based on data from backend -->
+    </div>
+
+   
+     <a href="add_propertyForm.html">Add Property</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<main>
+  <div class="dashboard">
+    <!-- existing property cards-->
+  </div>
+
+
+
+
+<script>
+  
+  function addProperty(event) {
+    event.preventDefault();
+
+    
+    const price = document.getElementById("price").value;
+    const location = document.getElementById("location").value;
+    const age = document.getElementById("age").value;
+    const floorPlan = document.getElementById("floorPlan").value;
+    const bedrooms = document.getElementById("bedrooms").value;
+    const bathrooms = document.getElementById("bathrooms").value;
+
+    
+    const newProperty = {
+      price: price,
+      location: location,
+      age: age,
+      floorPlan: floorPlan,
+      bedrooms: bedrooms,
+      bathrooms: bathrooms,
+    };
+
+    
+  }
+
+  
+  const addPropertyForm = document.getElementById("addPropertyForm");
+  addPropertyForm.addEventListener("submit", addProperty);
+
+
+
+ 
+  function editProperty(event) {
+    event.preventDefault();
+
+    
+    const propertyId = document.getElementById("propertyId").value;
+    const price = document.getElementById("price").value;
+    const location = document.getElementById("location").value;
+    const age = document.getElementById("age").value;
+    const floorPlan = document.getElementById("floorPlan").value;
+    const bedrooms = document.getElementById("bedrooms").value;
+    const bathrooms = document.getElementById("bathrooms").value;
+
+    
+    const updatedProperty = {
+      id: propertyId,
+      price: price,
+      location: location,
+      age: age,
+      floorPlan: floorPlan,
+      bedrooms: bedrooms,
+      bathrooms: bathrooms,
+    };
+
+    
+  }
+
+  
+  const editPropertyForm = document.getElementById("editPropertyForm");
+  editPropertyForm.addEventListener("submit", editProperty);
+
+  function viewDetails(propertyId) {
+    window.location.href = `view_propertyDetails.html?id=${propertyId}`;
+  }
+
+  
+  const viewDetailsLinks = document.querySelectorAll('.view-details-link');
+  viewDetailsLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const propertyId = link.getAttribute('data-property-id');
+      viewDetails(propertyId);
+    });
+  });
+</script>

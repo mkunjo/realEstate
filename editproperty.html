@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Property</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Edit Property</h1>
+    <nav>
+      <!-- navd -->
+    </nav>
+  </header>
+
+  <main>
+    <form id="editPropertyForm">
+      
+      <input type="hidden" id="propertyId">
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" required>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+
+      <label for="floorPlan">Floor Plan (sq ft):</label>
+      <input type="number" id="floorPlan" required>
+
+      <label for="bedrooms">Bedrooms:</label>
+      <input type="number" id="bedrooms" required>
+
+      <label for="bathrooms">Bathrooms:</label>
+      <input type="number" id="bathrooms" required>
+
+      <div class="form-actions">
+        <button type="submit">Save Changes</button>
+        <a href="sellerdash.html">Cancel</a>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
