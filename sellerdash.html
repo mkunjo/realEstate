@@ -10,7 +10,7 @@
   <header>
     <h1>Seller Dashboard</h1>
     <nav>
-      <!-- Add navigation links  -->
+      <!-- Add navigation links here if needed -->
     </nav>
   </header>
 
@@ -25,108 +25,22 @@
         <p>Bedrooms: 3</p>
         <p>Bathrooms: 2</p>
         <div class="card-actions">
-          <a href="viewdetails.html">View Details</a>
-          <a href="editproperty.html">Edit Property</a>
-          <a href="deleteproperty.html">Delete Property</a>
+          <a href="#">View Details</a>
+          <a href="#">Edit Property</a>
+          <a href="#">Delete Property</a>
         </div>
       </div>
 
-      <!-- Add property cards here based on data from backend -->
+      <!-- Add more property cards here based on data from the backend -->
     </div>
 
-   
+    <!-- Add a button or link to add a new property -->
      <a href="add_propertyForm.html">Add Property</a>
   </main>
 
   <footer>
     <p>&copy; 2023 Your Company. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-<main>
-  <div class="dashboard">
-    <!-- existing property cards-->
-  </div>
-
-
-
-
-<script>
-  
-  function addProperty(event) {
-    event.preventDefault();
-
-    
-    const price = document.getElementById("price").value;
-    const location = document.getElementById("location").value;
-    const age = document.getElementById("age").value;
-    const floorPlan = document.getElementById("floorPlan").value;
-    const bedrooms = document.getElementById("bedrooms").value;
-    const bathrooms = document.getElementById("bathrooms").value;
-
-    
-    const newProperty = {
-      price: price,
-      location: location,
-      age: age,
-      floorPlan: floorPlan,
-      bedrooms: bedrooms,
-      bathrooms: bathrooms,
-    };
-
-    
-  }
-
-  
-  const addPropertyForm = document.getElementById("addPropertyForm");
-  addPropertyForm.addEventListener("submit", addProperty);
-
-
-
- 
-  function editProperty(event) {
-    event.preventDefault();
-
-    
-    const propertyId = document.getElementById("propertyId").value;
-    const price = document.getElementById("price").value;
-    const location = document.getElementById("location").value;
-    const age = document.getElementById("age").value;
-    const floorPlan = document.getElementById("floorPlan").value;
-    const bedrooms = document.getElementById("bedrooms").value;
-    const bathrooms = document.getElementById("bathrooms").value;
-
-    
-    const updatedProperty = {
-      id: propertyId,
-      price: price,
-      location: location,
-      age: age,
-      floorPlan: floorPlan,
-      bedrooms: bedrooms,
-      bathrooms: bathrooms,
-    };
-
-    
-  }
-
-  
-  const editPropertyForm = document.getElementById("editPropertyForm");
-  editPropertyForm.addEventListener("submit", editProperty);
-
-  function viewDetails(propertyId) {
-    window.location.href = `view_propertyDetails.html?id=${propertyId}`;
-  }
-
-  
-  const viewDetailsLinks = document.querySelectorAll('.view-details-link');
-  viewDetailsLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const propertyId = link.getAttribute('data-property-id');
-      viewDetails(propertyId);
-    });
-  });
-</script>
