@@ -3,48 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add New Property</title>
+  <title>Add Property Form</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+   <header>
     <h1>Add New Property</h1>
     <nav>
       <!--navigation links -->
     </nav>
   </header>
-
-  <main>
-    <form id="addPropertyForm">
-      <label for="price">Price:</label>
-      <input type="number" id="price" required>
-
-      <label for="location">Location:</label>
-      <input type="text" id="location" required>
-
-      <label for="age">Age:</label>
-      <input type="number" id="age" required>
-
-      <label for="floorPlan">Floor Plan (sq ft):</label>
-      <input type="number" id="floorPlan" required>
-
-      <label for="bedrooms">Bedrooms:</label>
-      <input type="number" id="bedrooms" required>
-
-      <label for="bathrooms">Bathrooms:</label>
-      <input type="number" id="bathrooms" required>
-
-      <div class="form-actions">
-        <button type="submit">Add Property</button>
-        <a href="sellerdash.html">Cancel</a>
-      </div>
-    </form>
-  </main>
-
+  <form action="add_property.php" method="POST">
+    <label for="seller_name">Seller's Name:</label>
+    <input type="text" name="seller_name" required><br>
+    <label for="price">Property Price:</label>
+    <input type="text" name="price" id="price" required><br>
+    <label for="age">Property Age:</label>
+    <input type="number" name="age" id="age" required step="1"><br>
+	<label for="floorPlan">Floor Plan (sq ft):</label>
+    <input type="number" name="floorPlan" id="floorPlan" required><br>
+    <label for="bedrooms">Bedrooms:</label>
+    <input type="number" name="bedrooms" id="bedrooms" required><br>
+    <label for="bathrooms">Bathrooms:</label>
+    <input type="number" name="bathrooms" id="bathrooms" required><br>
+    <label for="location">Property Address:</label>
+    <input type="text" name="location" id="location" required><br>
+    <label for="property_garden">Does it have a Garden:</label>
+    <input type="checkbox" name="property_garden" value="yes"><br>
+    <label for="property_parking">Does it have Parking Available:</label>
+    <input type="checkbox" name="property_parking" value="yes"><br>
+    <label for="property_mainroads">Main Road(s) near Property:</label>
+    <input type="text" name="property_mainroads" required><br>
+    <label for="property_tax">Property Tax (7% of Property Price):</label>
+     <input type="text" name="property_tax" id="property_tax" readonly required><br>
+    <input type="submit" value="Save">
+	<a href="sellerdash.html">Cancel</a>
+  </form>
+  <script src="script.js"></script>
   <footer>
     <p>&copy; 2023 Your Company. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
-
