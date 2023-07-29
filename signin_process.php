@@ -1,4 +1,6 @@
 <?php
+session_start(); // start the session
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $host = "localhost";
@@ -27,9 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify the entered password against the hashed password
         if (password_verify($password, $hashed_password)) {
-            // Redirect to a dashboard page.
+            // User has successfully logged in
+            $_SESSION["loggedin"] = true;
+
+            // Redirect to a dashboard page
             header("Location: sellerdash.php");
-                exit();
+            exit();
         } else {
             echo "Invalid password.";
         }

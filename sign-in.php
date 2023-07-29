@@ -1,3 +1,10 @@
+<?php
+session_start(); // start the session
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: sellerdash.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
