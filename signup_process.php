@@ -2,9 +2,9 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $host = "localhost";
-    $user = "amohamed14";
-    $pass = "amohamed14";
-    $dbname = "amohamed14";
+    $user = "mkunjo1";
+    $pass = "mkunjo1";
+    $dbname = "mkunjo1";
 
     //create connection
     $conn = new mysqli($host, $user, $pass, $dbname);

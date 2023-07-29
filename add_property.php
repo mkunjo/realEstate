@@ -15,9 +15,9 @@ $property_tax = $price_float * 0.07;
 
 // Connect to MySQL db
 $servername = "localhost";
-$username = "ovasquez2";
-$password = "ovasquez2";
-$dbname = "ovasquez2";
+$username = "mkunjo1";
+$password = "mkunjo1";
+$dbname = "mkunjo1";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -35,7 +35,7 @@ $createTableSQL = "CREATE TABLE IF NOT EXISTS PROPERTY(
     bedrooms INT,
     bathrooms INT,
     location VARCHAR(255),
-    property_garden VARCHAR(255), 
+    property_garden VARCHAR(255),
     property_parking VARCHAR(255),
     property_mainroads VARCHAR(255),
     property_tax DECIMAL(10,2)
@@ -60,7 +60,7 @@ if ($conn->query($insertSQL) === TRUE) {
     echo "PROPERTY data inserted successfully into the table.";
 } else {
     echo "Error inserting data: " . $conn->error;
-	echo "Query: " . $insertSQL; 
+	echo "Query: " . $insertSQL;
 }
 
 // Close database connection

@@ -1,0 +1,118 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Add Property Form */
+/* Add Property Page */
+main form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+main form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+main form input[type="text"],
+main form input[type="number"],
+main form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main form textarea {
+  height: 150px;
+}
+
+main form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main form input[type="submit"],
+main form a {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+main form input[type="submit"]:hover,
+main form a:hover {
+  background-color: #0056b3;
+}
+
+main form input[type="submit"] {
+  margin-right: 10px;
+}
+
+/* ... Add other styling as needed ... */
+
+/* ... Add other styling as needed ... */
+
+  

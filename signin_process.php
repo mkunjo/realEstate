@@ -2,17 +2,17 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $host = "localhost";
-    $user = "amohamed14";
-    $pass = "amohamed14";
-    $dbname = "amohamed14";
+    $user = "mkunjo1";
+    $pass = "mkunjo1";
+    $dbname = "mkunjo1";
 
     //create connection
     $conn = new mysqli($host, $user, $pass, $dbname);
     //check connection
     if ($conn->connect_error) {
         die("connection failed: " . $conn->connect_error);
-    } 
-    
+    }
+
     // Get data from the form
     $username = $_POST["username"];
     $password = trim($_POST["password"]);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $hashed_password = $row["password"];
-        
+
         // Verify the entered password against the hashed password
         if (password_verify($password, $hashed_password)) {
             // Redirect to a dashboard page.
