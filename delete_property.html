@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Property</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <h1>Big4-Estate</h1>
+            <a href="index.html"><img src="big4-estate-logo.png" class="header-logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="logout.php">logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <h2>Delete Property</h2>
+  <p>Please confirm that you want to delete the property with the following ID:</p>
+  <div class="property-details">
+    <form action="delete_property.php" method="POST">
+      <label for="property_id">Property ID:</label>
+      <input type="number" name="property_id" required>
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+</body>
+</html>

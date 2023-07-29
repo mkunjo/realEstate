@@ -25,6 +25,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sign-in.html">Sign In</a></li>
                     <li><a href="sign-up.html">Sign Up</a></li>
+                    
                 </ul>
             </nav>
         </div>
