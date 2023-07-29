@@ -9,12 +9,19 @@
 </head>
 
 <body>
-  <header>
-    <h1>Seller Dashboard</h1>
-    <nav>
-      <!-- Add navigation links here if needed -->
-    </nav>
-  </header>
+<header>
+        <div class="container">
+            <nav>
+                <h1>Seller Dashboard</h1>
+                <a href="index.html"><img src="big4-estate-logo.png" class="header-logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sign-in.html">Sign In</a></li>
+                    <li><a href="sign-up.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <main>
     <div class="dashboard">

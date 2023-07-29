@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify the entered password against the hashed password
         if (password_verify($password, $hashed_password)) {
             // Redirect to a dashboard page.
-            header("Location: sellerdash.html");
+            header("Location: sellerdash.php");
                 exit();
         } else {
             echo "Invalid password.";
