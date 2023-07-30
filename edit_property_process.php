@@ -13,9 +13,14 @@ if ($conn->connect_error) {
 //Get the id from the URL and the new details from the form
 $id = $_GET["id"];
 $location = $_POST["location"];
+$price = $_POST["price"];
+$age = $_POST["age"];
+$floorPlan = $_POST["floorPlan"];
+$bedrooms = $_POST["bedrooms"];
+$bathrooms = $_POST["bathrooms"];
 
 //Create an UPDATE query
-$sql = "UPDATE PROPERTY SET location = '$location' WHERE id = $id";
+$sql = "UPDATE PROPERTY SET location = '$location', price = $price, age = $age, floorPlan = $floorPlan, bedrooms = $bedrooms, bathrooms = $bathrooms WHERE id = $id";
 
 //Execute the query
 if ($conn->query($sql) === TRUE) {
@@ -23,7 +28,7 @@ if ($conn->query($sql) === TRUE) {
     //Redirect back to the dashboard after the update
     header("Location: sellerdash.php");
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "Error updating record: " . $conn->connect_error;
 }
 
 //Close database connection

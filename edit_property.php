@@ -53,7 +53,8 @@ $conn->close();
   </header>
 
   <main>
-    <form id="editPropertyForm" form action="edit_property_process.php?id=<?= $property['id'] ?>" method="post">
+    <form id="editPropertyForm" action="edit_property_process.php?id=<?= $property['id'] ?>" method="post">
+
       <input type="hidden" id="propertyId">
 
       <label for="price">Price:</label>
