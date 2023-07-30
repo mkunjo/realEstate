@@ -54,7 +54,7 @@
         <p>Bathrooms: <?= $row["bathrooms"] ?></p>
         <div class="card-actions">
           <a href="#">View Details</a>
-          <a href="editproperty.html">Edit Property</a>
+          <a href="edit_property.php?id=<?= $row["id"] ?>">Edit Property</a>
           <a href="delete_property.php?id=<?= $row["id"] ?>">Delete Property</a>
         </div>
       </div>
