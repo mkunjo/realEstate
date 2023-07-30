@@ -70,7 +70,8 @@
     </div>
 
     <!-- Add a button or link to add a new property -->
-    <a href="add_propertyForm.html">Add Property</a>
+    <br>
+    <a href="add_propertyForm.html" class="myButton">Add Property</a>
   </main>
 
   <footer>
