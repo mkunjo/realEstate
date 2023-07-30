@@ -74,8 +74,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2023 Your Company. All rights reserved.</p>
-  </footer>
+        <p>Contact Us | Terms of Service | Privacy Policy</p>
+    </footer>
   <script src="script.js"></script>
 </body>
 
