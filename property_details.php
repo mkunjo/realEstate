@@ -39,6 +39,7 @@ $property = $result->fetch_assoc();
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sellerdash.php">Dashboard</a></li>
+                    <li><a href="sign-out.php">Sign Out</a></li>
 
                 </ul>
             </nav>
