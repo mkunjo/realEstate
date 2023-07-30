@@ -45,7 +45,7 @@
       ?>
 
       <div class="property-card">
-        <img src="property1.jfif" alt="Property Image">
+        <img class="card-image "src="property.png" alt="Property Image">
         <h2>$<?= $row["price"] ?></h2>
         <p><?= $row["location"] ?></p>
         <p>Age: <?= $row["age"] ?> years</p>
