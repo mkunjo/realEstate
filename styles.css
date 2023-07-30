@@ -378,3 +378,7 @@ main {
 .container.add-property a:hover {
   opacity: 0.8;
 }
+
+#editPropertyForm {
+  color: black;
+}
