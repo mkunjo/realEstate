@@ -43,10 +43,10 @@ $conn->close();
         <h1>Big4-Estate</h1>
         <a href="index.html"><img src="big4-estate-logo.png" class="header-logo"></a>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sign-in.php">Sign In</a></li>
-          <li><a href="sign-up.php">Sign Up</a></li>
-          <li><a href="sign-out.php">Sign Out</a></li>
+          <li><a href="index.html" class="myButton">Home</a></li>
+          <li><a href="sign-in.php" class="myButton">Sign In</a></li>
+          <li><a href="sign-up.php" class="myButton">Sign Up</a></li>
+          <li><a href="sign-out.php" class="myButton">Sign Out</a></li>
         </ul>
       </nav>
     </div>
