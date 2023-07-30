@@ -58,6 +58,8 @@ var_dump($property_tax); */
 
 if ($conn->query($insertSQL) === TRUE) {
     echo "PROPERTY data inserted successfully into the table.";
+    header('Location: sellerdash.php');
+    exit();
 } else {
     echo "Error inserting data: " . $conn->error;
 	echo "Query: " . $insertSQL;
