@@ -137,6 +137,7 @@ main {
 }
 
 #editPropertyForm {
+  width: auto;
   max-width: 400px;
   margin: 0 auto;
   background-color: #f2f2f2;
@@ -186,5 +187,99 @@ main {
 
 #editPropertyForm button:hover,
 #editPropertyForm a:hover {
+  opacity: 0.8;
+}
+
+.container.sign-in-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container.sign-in-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.sign-in-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container.sign-in-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container.sign-in-container input[type="text"],
+.container.sign-in-container input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.container.sign-in-container button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container.sign-in-container button:hover {
+  opacity: 0.8;
+}
+
+/* Styles specific to the "Sign Up" page */
+
+.container.sign-up-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container.sign-up-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.sign-up-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container.sign-up-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container.sign-up-container input[type="text"],
+.container.sign-up-container input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.container.sign-up-container button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container.sign-up-container button:hover {
   opacity: 0.8;
 }

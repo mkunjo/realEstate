@@ -32,6 +32,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     </header>
 
     <div class="container">
+        <div class="container sign-in-container">
         <h1>Sign In</h1>
         <form action="signin_process.php" method="post">
             <label for="username">Username:</label>
@@ -42,6 +43,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
             <button type="submit">Sign In</button>
         </form>
+        </div>
     </div>
 
     <footer>
