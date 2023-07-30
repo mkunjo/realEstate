@@ -5,34 +5,26 @@ $password = "mkunjo1";
 $dbname = "mkunjo1";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
+//Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+//Get the id from the URL
+$id = $_GET["id"];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    if (isset($_POST["property_id"])) {
-        $property_id = $_POST["property_id"];
-        
-        // Create the SQL query to delete the property
-        $deleteSQL = "DELETE FROM PROPERTY WHERE id = $property_id";
+//Create a DELETE query
+$sql = "DELETE FROM PROPERTY WHERE id = $id";
 
-        // Execute the query
-        if ($conn->query($deleteSQL) === TRUE) {
-            echo "Property with ID $property_id has been deleted.";
-        } else {
-            echo "Error deleting property: " . $conn->error;
-        }
-    } else {
-        echo "Property ID not provided.";
-    }
+// Query execution
+if ($conn->query($sql) === TRUE) {
+    echo "Record deleted successfully";
+    //Redirect back to the dashboard after deletion
+    header("Location: sellerdash.php");
 } else {
-    echo "Invalid request method.";
+    echo "Error deleting record: " . $conn->error;
 }
 
-
+// Close database connection
 $conn->close();
 ?>
-
