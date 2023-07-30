@@ -283,3 +283,61 @@ main {
 .container.sign-up-container button:hover {
   opacity: 0.8;
 }
+
+.container.add-property {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container.add-property label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container.add-property input[type="text"],
+.container.add-property input[type="number"],
+.container.add-property input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.container.add-property input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+.container.add-property input[type="text"]:focus,
+.container.add-property input[type="number"]:focus,
+.container.add-property input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.container.add-property input[type="submit"],
+.container.add-property a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container.add-property input[type="submit"] {
+  background-color: #007bff;
+}
+
+.container.add-property a {
+  background-color: #333;
+}
+
+.container.add-property input[type="submit"]:hover,
+.container.add-property a:hover {
+  opacity: 0.8;
+}
