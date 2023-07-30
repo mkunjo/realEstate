@@ -18,7 +18,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sign-in.html">Sign In</a></li>
                     <li><a href="sign-up.php">Sign Up</a></li>
-                    <li><a href="logout.php">logout</a></li>
+                    <li><a href="sign-out.php">Sign Out</a></li>
                 </ul>
             </nav>
         </div>
