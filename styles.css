@@ -135,3 +135,56 @@ main {
 .property-details p:last-of-type {
   margin-bottom: 0;
 }
+
+#editPropertyForm {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#editPropertyForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#editPropertyForm input[type="number"],
+#editPropertyForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#editPropertyForm .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#editPropertyForm button,
+#editPropertyForm a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#editPropertyForm button {
+  background-color: #007bff;
+}
+
+#editPropertyForm a {
+  background-color: #333;
+}
+
+#editPropertyForm button:hover,
+#editPropertyForm a:hover {
+  opacity: 0.8;
+}
